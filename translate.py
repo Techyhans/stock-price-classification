@@ -33,8 +33,8 @@ for row in csvreader:
         # print(result.text)
         # print('-------------------')
 
-        dest_rows.append([result.origin, result.text, row[1], row[2]])
-        writer.writerow(dest_rows)
+        # dest_rows.append([result.origin, result.text, row[1], row[2]])
+        writer.writerow([result.origin, result.text, row[1], row[2]])
         time.sleep(0.2)
     except:
         print(row)
