@@ -22,6 +22,7 @@ writer.writerow(dest_header)
 rows = []
 dest_rows = []
 for row in csvreader:
+
     try:
         rows.append(row)
 
@@ -34,10 +35,11 @@ for row in csvreader:
         # print('-------------------')
 
         # dest_rows.append([result.origin, result.text, row[1], row[2]])
+
         writer.writerow([result.origin, result.text, row[1], row[2]])
-        time.sleep(0.2)
+        time.sleep(1)
     except:
-        print(row)
+        print('error', row)
 
 # close the file
 f.close()
